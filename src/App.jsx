@@ -6,6 +6,7 @@ import Counter from "./componentes/Counter";
 import InputName from "./componentes/InputName";
 import ToggleButton from "./componentes/ToggleButton";
 import CounterUseEffect from "./componentes/CounterUseEffect";
+import CardTailwind from "./componentes/CardTailwind";
 
 function App() {
   return (
@@ -27,7 +28,9 @@ function App() {
       <h2>✅Eventos y captura de información</h2>
       <InputName /> <hr />
       <h2>✅Estructura y uso de useEffect</h2>
-      <CounterUseEffect />
+      <CounterUseEffect /> <hr />
+      <h2>✅Tailwind</h2>
+      <CardTailwind />
     </section>
   );
 }
