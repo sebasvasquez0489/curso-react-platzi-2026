@@ -9,6 +9,7 @@ import CounterUseEffect from "./componentes/CounterUseEffect";
 import CardTailwind from "./componentes/CardTailwind";
 import StaticComponent from "./componentes/StaticComponent";
 import UserListFetch from "./componentes/UserListFetch";
+import UserListFetchLoading from "./componentes/UserListFetchLoading";
 
 function App() {
   return (
@@ -37,6 +38,8 @@ function App() {
       <StaticComponent />
       <hr />
       <UserListFetch />
+      <hr />
+      <UserListFetchLoading />
     </section>
   );
 }
