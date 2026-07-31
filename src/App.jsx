@@ -8,6 +8,7 @@ import ToggleButton from "./componentes/ToggleButton";
 import CounterUseEffect from "./componentes/CounterUseEffect";
 import CardTailwind from "./componentes/CardTailwind";
 import StaticComponent from "./componentes/StaticComponent";
+import UserListFetch from "./componentes/UserListFetch";
 
 function App() {
   return (
@@ -34,6 +35,8 @@ function App() {
       <CardTailwind /> <hr />
       <h2>✅Datos estaticos</h2>
       <StaticComponent />
+      <hr />
+      <UserListFetch />
     </section>
   );
 }
