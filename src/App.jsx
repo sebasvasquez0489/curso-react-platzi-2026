@@ -1,21 +1,22 @@
 import "./App.css";
 
 //Importación de los componetes
-import Card from "./componentes/Card";
-import Counter from "./componentes/Counter";
-import InputName from "./componentes/InputName";
-import ToggleButton from "./componentes/ToggleButton";
-import CounterUseEffect from "./componentes/CounterUseEffect";
-import CardTailwind from "./componentes/CardTailwind";
-import StaticComponent from "./componentes/StaticComponent";
-import UserListFetch from "./componentes/UserListFetch";
-import UserListFetchLoading from "./componentes/UserListFetchLoading";
+// import Card from "./componentes/Card";
+// import Counter from "./componentes/Counter";
+// import InputName from "./componentes/InputName";
+// import ToggleButton from "./componentes/ToggleButton";
+// import CounterUseEffect from "./componentes/CounterUseEffect";
+// import CardTailwind from "./componentes/CardTailwind";
+// import StaticComponent from "./componentes/StaticComponent";
+// import UserListFetch from "./componentes/UserListFetch";
+// import UserListFetchLoading from "./componentes/UserListFetchLoading";
+import SearchPosts from "./componentes/SearchPosts";
 
 function App() {
   return (
     <section>
       <h1>Curso React JS - Platzi 2026</h1>
-      <h2>✅Creación de componentes</h2>
+      {/* <h2>✅Creación de componentes</h2>
       <Card
         titulo="Componente # 1"
         descripcion="Creacion de mi primer componente"
@@ -39,7 +40,8 @@ function App() {
       <hr />
       <UserListFetch />
       <hr />
-      <UserListFetchLoading />
+      <UserListFetchLoading /> */}
+      <SearchPosts />
     </section>
   );
 }
