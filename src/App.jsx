@@ -10,13 +10,20 @@ import "./App.css";
 // import StaticComponent from "./componentes/StaticComponent";
 // import UserListFetch from "./componentes/UserListFetch";
 // import UserListFetchLoading from "./componentes/UserListFetchLoading";
-import SearchPosts from "./componentes/SearchPosts";
+//import SearchPosts from "./componentes/SearchPosts";
+
+//Componentes curso React JS - Platzi 2026 actualizado
+import Header from "./cuso_actualizado/Header";
+import Hero from "./cuso_actualizado/Hero";
+import SearchBar from "./cuso_actualizado/SearchBar";
+import PropertyList from "./cuso_actualizado/PropertyList";
 
 function App() {
   return (
-    <section>
+    <main>
       <h1>Curso React JS - Platzi 2026</h1>
-      {/* <h2>✅Creación de componentes</h2>
+      {/* <section>
+      <h2>✅Creación de componentes</h2>
       <Card
         titulo="Componente # 1"
         descripcion="Creacion de mi primer componente"
@@ -40,9 +47,14 @@ function App() {
       <hr />
       <UserListFetch />
       <hr />
-      <UserListFetchLoading /> */}
+      <UserListFetchLoading /> 
       <SearchPosts />
-    </section>
+    </section> */}
+      <Header />
+      <Hero />
+      <SearchBar />
+      <PropertyList />
+    </main>
   );
 }
 
