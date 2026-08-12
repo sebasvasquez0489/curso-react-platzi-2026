@@ -1,7 +1,16 @@
-import { properties } from "./data/property";
 import { PropertyCard } from "./PropertyCard";
 
-export function PropertyList() {
+export function PropertyList({ properties }) {
+  //Renderizado opcional para carga si no hay datos
+  if (properties.length === 0) {
+    return (
+      <section>
+        <h3>Alojamientos disponibles</h3>
+        <p>No se encuentran Alojamientos con esa descripción</p>
+      </section>
+    );
+  }
+
   return (
     <section className="properties-section">
       <h3>Alojamientos disponibles</h3>

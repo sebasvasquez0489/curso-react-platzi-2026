@@ -18,6 +18,7 @@ import { Header } from "./cuso_actualizado/Header";
 import { Hero } from "./cuso_actualizado/Hero";
 import { SearchBar } from "./cuso_actualizado/SearchBar";
 import { PropertyList } from "./cuso_actualizado/PropertyList";
+import { properties } from "./cuso_actualizado/data/properties";
 
 //Ejemplos Curso inicial
 //   <section>
@@ -59,7 +60,7 @@ function App() {
         <Hero />
 
         <SearchBar />
-        <PropertyList />
+        <PropertyList properties={properties} />
       </main>
     </div>
   );

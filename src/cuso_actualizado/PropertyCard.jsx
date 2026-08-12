@@ -5,7 +5,7 @@ export function PropertyCard({ title, location, price, image, type }) {
       <div className="property-card-content">
         <h4>{title}</h4>
         <p>{location}</p>
-        <p>{type} </p>
+        <p>{type || "Tipo no especificado"} </p>
         <strong>${price} / Noche</strong>
       </div>
     </article>
