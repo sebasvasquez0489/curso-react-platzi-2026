@@ -1,4 +1,5 @@
-import "./App.css";
+// import "./App.css";
+import "./index.css";
 
 //Importación de los componetes
 // import Card from "./componentes/Card";
@@ -13,48 +14,68 @@ import "./App.css";
 //import SearchPosts from "./componentes/SearchPosts";
 
 //Componentes curso React JS - Platzi 2026 actualizado
-import Header from "./cuso_actualizado/Header";
-import Hero from "./cuso_actualizado/Hero";
-import SearchBar from "./cuso_actualizado/SearchBar";
-import PropertyList from "./cuso_actualizado/PropertyList";
+import { Header } from "./cuso_actualizado/Header";
+import { Hero } from "./cuso_actualizado/Hero";
+//import { SearchBar } from "./cuso_actualizado/SearchBar";
+import { PropertyList } from "./cuso_actualizado/PropertyList";
+
+//Ejemplos Curso inicial
+//   <section>
+//   <h2>✅Creación de componentes</h2>
+//   <Card
+//     titulo="Componente # 1"
+//     descripcion="Creacion de mi primer componente"
+//   />
+//   <Card
+//     titulo="Componente # 2"
+//     descripcion="Reutilizando el primer componente"
+//   />
+//   <hr />
+//   <h2>✅Manejo de Estado - useState()</h2>
+//   <Counter /> <br />
+//   <ToggleButton /> <hr />
+//   <h2>✅Eventos y captura de información</h2>
+//   <InputName /> <hr />
+//   <h2>✅Estructura y uso de useEffect</h2>
+//   <CounterUseEffect /> <hr />
+//   <h2>✅Tailwind</h2>
+//   <CardTailwind /> <hr />
+//   <h2>✅Datos estaticos</h2>
+//   <StaticComponent />
+//   <hr />
+//   <UserListFetch />
+//   <hr />
+//   <UserListFetchLoading />
+//   <SearchPosts />
+// </section>
 
 function App() {
+  <h1>Curso React JS - Platzi 2026</h1>;
   return (
-    <main>
-      <h1>Curso React JS - Platzi 2026</h1>
-      {/* <section>
-      <h2>✅Creación de componentes</h2>
-      <Card
-        titulo="Componente # 1"
-        descripcion="Creacion de mi primer componente"
-      />
-      <Card
-        titulo="Componente # 2"
-        descripcion="Reutilizando el primer componente"
-      />
-      <hr />
-      <h2>✅Manejo de Estado - useState()</h2>
-      <Counter /> <br />
-      <ToggleButton /> <hr />
-      <h2>✅Eventos y captura de información</h2>
-      <InputName /> <hr />
-      <h2>✅Estructura y uso de useEffect</h2>
-      <CounterUseEffect /> <hr />
-      <h2>✅Tailwind</h2>
-      <CardTailwind /> <hr />
-      <h2>✅Datos estaticos</h2>
-      <StaticComponent />
-      <hr />
-      <UserListFetch />
-      <hr />
-      <UserListFetchLoading /> 
-      <SearchPosts />
-    </section> */}
+    <div className="app">
       <Header />
-      <Hero />
-      <SearchBar />
-      <PropertyList />
-    </main>
+
+      <main className="main-content">
+        <Hero />
+        <section className="search-box">
+          <label>
+            Ciudad
+            <input type="text" placeholder="Santiago, Chile" />
+          </label>
+          <label>
+            Tipo
+            <input type="text" placeholder="Apartamento" />
+          </label>
+          <label>
+            Huéspedes
+            <input type="number" placeholder="2" />
+          </label>
+          <button>Buscar</button>
+        </section>
+        {/* <SearchBar /> */}
+        <PropertyList />
+      </main>
+    </div>
   );
 }
 
