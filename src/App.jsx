@@ -16,7 +16,7 @@ import "./index.css";
 //Componentes curso React JS - Platzi 2026 actualizado
 import { Header } from "./cuso_actualizado/Header";
 import { Hero } from "./cuso_actualizado/Hero";
-//import { SearchBar } from "./cuso_actualizado/SearchBar";
+import { SearchBar } from "./cuso_actualizado/SearchBar";
 import { PropertyList } from "./cuso_actualizado/PropertyList";
 
 //Ejemplos Curso inicial
@@ -57,22 +57,8 @@ function App() {
 
       <main className="main-content">
         <Hero />
-        <section className="search-box">
-          <label>
-            Ciudad
-            <input type="text" placeholder="Santiago, Chile" />
-          </label>
-          <label>
-            Tipo
-            <input type="text" placeholder="Apartamento" />
-          </label>
-          <label>
-            Huéspedes
-            <input type="number" placeholder="2" />
-          </label>
-          <button>Buscar</button>
-        </section>
-        {/* <SearchBar /> */}
+
+        <SearchBar />
         <PropertyList />
       </main>
     </div>

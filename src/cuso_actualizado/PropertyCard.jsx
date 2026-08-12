@@ -1,14 +1,12 @@
-export function PropertyCard() {
+export function PropertyCard({ title, location, price, image, type }) {
   return (
     <article className="property-card">
-      <img
-        src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2"
-        alt="Apartamento moderno"
-      />
+      <img src={image} alt={title} />
       <div className="property-card-content">
-        <h4>Apartamento moderno</h4>
-        <p>Santiago, Chile</p>
-        <strong>$75 / noche</strong>
+        <h4>{title}</h4>
+        <p>{location}</p>
+        <p>{type} </p>
+        <strong>${price} / Noche</strong>
       </div>
     </article>
   );
