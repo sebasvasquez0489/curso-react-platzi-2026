@@ -1,6 +1,3 @@
-// import "./App.css";
-import "./index.css";
-
 //Importación de los componetes
 // import Card from "./componentes/Card";
 // import Counter from "./componentes/Counter";
@@ -13,7 +10,8 @@ import "./index.css";
 // import UserListFetchLoading from "./componentes/UserListFetchLoading";
 //import SearchPosts from "./componentes/SearchPosts";
 
-//Componentes curso React JS - Platzi 2026 actualizado
+//Importación de componentes curso React JS - Platzi 2026 actualizado
+import { useState } from "react";
 import { Header } from "./cuso_actualizado/Header";
 import { Hero } from "./cuso_actualizado/Hero";
 import { SearchBar } from "./cuso_actualizado/SearchBar";
@@ -51,7 +49,42 @@ import { properties } from "./cuso_actualizado/data/properties";
 // </section>
 
 function App() {
-  <h1>Curso React JS - Platzi 2026</h1>;
+  // Valores actuales de los inputs
+  const [city, setCity] = useState("");
+  const [type, setType] = useState("");
+
+  // Valores que realmente se aplican al filtro
+  const [searchedCity, setSearchedCity] = useState("");
+  const [searchedType, setSearchedType] = useState("");
+
+  // Filtrado de propiedades
+  const filteredProperties = properties.filter((property) => {
+    const matchesCity =
+      !searchedCity ||
+      property.location.toLowerCase().includes(searchedCity.toLowerCase());
+
+    const matchesType =
+      !searchedType ||
+      property.type.toLowerCase().includes(searchedType.toLowerCase());
+
+    return matchesCity && matchesType;
+  });
+
+  // Se ejecuta únicamente cuando se presiona el botón Buscar
+  function handleSearch() {
+    setSearchedCity(city.trim());
+    setSearchedType(type.trim());
+  }
+
+  // Limpia los inputs y también los filtros aplicados
+  function handleClear() {
+    setCity("");
+    setType("");
+
+    setSearchedCity("");
+    setSearchedType("");
+  }
+
   return (
     <div className="app">
       <Header />
@@ -59,8 +92,18 @@ function App() {
       <main className="main-content">
         <Hero />
 
-        <SearchBar />
-        <PropertyList properties={properties} />
+        <SearchBar
+          city={city}
+          type={type}
+          searchedCity={searchedCity}
+          searchedType={searchedType}
+          onChangeCity={setCity}
+          onChangeType={setType}
+          onSearch={handleSearch}
+          onClear={handleClear}
+        />
+
+        <PropertyList properties={filteredProperties} />
       </main>
     </div>
   );

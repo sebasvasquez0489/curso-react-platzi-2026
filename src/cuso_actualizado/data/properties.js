@@ -13,7 +13,7 @@ export const properties = [
     location: "Bariloche, Argentina",
     price: 120,
     image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
-    // type: "Casa",
+    type: "",
   },
   {
     id: 3,
