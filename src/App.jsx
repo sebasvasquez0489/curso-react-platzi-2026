@@ -10,7 +10,8 @@ import "./App.css";
 // import StaticComponent from "./componentes/StaticComponent";
 // import UserListFetch from "./componentes/UserListFetch";
 // import UserListFetchLoading from "./componentes/UserListFetchLoading";
-import SearchPosts from "./componentes/SearchPosts";
+//import SearchPosts from "./componentes/SearchPosts";
+import CounterUseReducer from "./componentes/CounterUseReducer";
 
 function App() {
   return (
@@ -40,8 +41,9 @@ function App() {
       <hr />
       <UserListFetch />
       <hr />
-      <UserListFetchLoading /> */}
-      <SearchPosts />
+      <UserListFetchLoading /> 
+      <SearchPosts />*/}
+      <CounterUseReducer />
     </section>
   );
 }
